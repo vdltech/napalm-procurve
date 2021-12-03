@@ -395,6 +395,7 @@ class ProcurveDriver(NetworkDriver):
             "PortType": "lldpRemPortIdSubtype",
             "PortDescr": "lldpRemPortDesc",
             "SysName": "lldpRemSysName",
+            "ChassisId": "lldpRemChassisId",
         }
 
         key_porttype_table = {
