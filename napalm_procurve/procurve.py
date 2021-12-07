@@ -195,7 +195,7 @@ class ProcurveDriver(NetworkDriver):
         mibs = {}
         for mib in output.splitlines():
             try:
-                m = re.search(r"^.*\.(\d+) =(.*)$", mib)
+                m = re.search(r"^\S+\.(\d+) =(.*)$", mib)
                 if m is None:
                     continue
                 mibs[m.group(1).strip()] = m.group(2).strip()
