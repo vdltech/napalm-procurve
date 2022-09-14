@@ -24,7 +24,7 @@ reqs = parse_requirements('requirements.txt')
 
 setup(
     name="napalm-procurve",
-    version="0.7.0",
+    version="0.7.1",
     packages=find_packages(),
     author="Andreas Thienemann",
     author_email="andreas@bawue.net",

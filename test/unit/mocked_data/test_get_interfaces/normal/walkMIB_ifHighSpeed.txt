@@ -1,0 +1,9 @@
+ifHighSpeed.1 = 100
+ifHighSpeed.2 = 1000
+ifHighSpeed.3 = 1000
+ifHighSpeed.4 = 1000
+ifHighSpeed.5 = 1000
+ifHighSpeed.6 = 10,000
+ifHighSpeed.7 = 10,000
+ifHighSpeed.8 = 10,000
+ifHighSpeed.9 = 10,000

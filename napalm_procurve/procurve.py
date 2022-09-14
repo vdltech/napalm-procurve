@@ -267,7 +267,7 @@ class ProcurveDriver(NetworkDriver):
             pass
 
         return {
-            "uptime": uptime_seconds,
+            "uptime": float(uptime_seconds),
             "vendor": vendor,
             "os_version": str(os_version),
             "serial_number": str(serial_number),
@@ -768,7 +768,7 @@ class ProcurveDriver(NetworkDriver):
 
         if_types = self._walkMIB_values("ifType")
         if_alias = self._walkMIB_values("ifAlias")
-        if_speed = self._walkMIB_values("ifSpeed")
+        if_speed = self._walkMIB_values("ifHighSpeed")
         if_macs = self._walkMIB_values("ifPhysAddress")
         if_mtu = self._walkMIB_values("ifMtu")
         if_adm_state = self._walkMIB_values("ifAdminStatus")
@@ -782,7 +782,7 @@ class ProcurveDriver(NetworkDriver):
                     "is_enabled": True if if_adm_state[idx] == "1" else False,
                     "description": str(if_alias[idx]),
                     "last_flapped": -1.0,  # Data makes no sense... unsupported for now.
-                    "speed": int(int(if_speed[idx].replace(",", "")) / 1000 / 1000),
+                    "speed": float(if_speed[idx].replace(",", "")),
                     "mac_address": str(if_macs[idx]),
                     "mtu": int(if_mtu[idx]),
                 }

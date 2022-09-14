@@ -39,6 +39,7 @@ class PatchedProcurveDriver(procurve.ProcurveDriver):
 
         self.patched_attrs = ['device']
         self.device = FakeProcurveDevice()
+        self.platform = 'procurve'
 
     def disconnect(self):
         pass
